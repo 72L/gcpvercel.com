@@ -6,7 +6,7 @@ export default function Home() {
   // const searchParams = useSearchParams();
 
   return (
-    <div className="w-screen flex flex-col items-center pt-[5vh] sm:pt-[15vh] text-center px-4">
+    <div className="w-screen flex flex-col items-center pt-[5vh] sm:pt-[15vh] text-center px-4 grow">
       <Image
         src="/logo-long.png"
         height={70}
