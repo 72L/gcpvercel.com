@@ -46,6 +46,9 @@ export default function LandingPagesLayout({
           <strong>Add GCP to Vercel</strong>
         </FooterLink>
         <FooterLink href="/docs">Docs</FooterLink>
+        <FooterLink href="https://github.com/72L/gcpvercel.com">
+          Github
+        </FooterLink>
         <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
         <FooterLink href="/terms-of-service">Terms of Service</FooterLink>
         <FooterLink href="https://vercel.com/integrations/gcp">
