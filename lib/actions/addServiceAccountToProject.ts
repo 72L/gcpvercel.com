@@ -54,7 +54,9 @@ export const addServiceAccountToProject = async (args: {
     (r): r is VercelError => !!(r as VercelError).error,
   );
   if (errors.length) {
-    throw new Error(errors.map((e) => e.error.message).join('\n'));
+    const errorMessage = errors.map((e) => e.error.message).join('\n');
+    console.error(errorMessage);
+    return { error: errorMessage };
   }
 
   return res;
