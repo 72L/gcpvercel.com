@@ -1,10 +1,11 @@
 import Image from 'next/image';
 
 import Button from '@components/form/Button';
+import { Sponsors } from '@components/sponsors/Sponsors';
 
 export default function Home() {
   return (
-    <div className="w-screen flex flex-col items-center text-center justify-center px-4 sm:pb-0 h-full overflow-y-scroll">
+    <div className="w-screen flex flex-col items-center text-center justify-start px-4 sm:pb-0 h-full overflow-y-scroll py-20">
       <Image
         src="/logo-long.png"
         height={100}
@@ -27,6 +28,9 @@ export default function Home() {
         <Button secondary className="text-xl font-medium" href="/docs">
           Read the docs
         </Button>
+      </div>
+      <div className="border-x sm:mx-12 mt-12 sm:mt-20">
+        <Sponsors />
       </div>
     </div>
   );
