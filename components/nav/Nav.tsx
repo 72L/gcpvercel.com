@@ -68,6 +68,7 @@ export const Nav = () => {
         <NavLink href="/docs/pub-sub">Cloud Pub/Sub</NavLink>
         <NavLink href="/docs/bigquery">BigQuery</NavLink>
         <NavLink href="/docs/cloud-vision">Cloud Vision</NavLink>
+        <NavLink href="/docs/vertex-ai">Vertex AI</NavLink>
       </div>
     </div>
   );
