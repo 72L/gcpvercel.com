@@ -18,7 +18,7 @@ To add the project to the integration, follow these steps:
 
 3. Make sure the integration has access to your project. After you've given the integration access to your new project, you should be able to see the project in the dropdown list when you're configuring GCP credentials.
 
-4. Configure the GCP credentials for your project by [adding the integration again](https://vercel.com/integrations/gcp/new)
+4. Configure the GCP credentials for your project by [adding the integration again](https://vercel.com/integrations/google-cloud-platform-community/new)
 
 
 `}</ReactMarkdown>
