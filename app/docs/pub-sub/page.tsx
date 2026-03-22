@@ -12,7 +12,7 @@ Google Cloud Pub/Sub is a fully-managed real-time messaging service that allows 
 
 ## Configuration
 
-Make sure you have installed the Vercel integration as described in the [Installation](/docs/install) guide. You can install it directly from the [integration page](https://vercel.com/integrations/gcp/new).
+Make sure you have installed the Vercel integration as described in the [Installation](/docs/install) guide. You can install it directly from the [integration page](https://vercel.com/integrations/google-cloud-platform-community/new).
 
 You'll need the Google Cloud Pub/Sub node.js client library (\`@google-cloud/pubsub\`). First, install it:
 

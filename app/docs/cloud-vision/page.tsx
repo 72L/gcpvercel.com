@@ -12,7 +12,7 @@ Google Cloud Vision is a machine learning service that allows you to analyze ima
 
 ## Configuration
 
-Make sure you have installed the Vercel integration as described in the [Installation](/docs/install) guide. You can install it directly from the [integration page](https://vercel.com/integrations/gcp/new).
+Make sure you have installed the Vercel integration as described in the [Installation](/docs/install) guide. You can install it directly from the [integration page](https://vercel.com/integrations/google-cloud-platform-community/new).
 
 You'll need the Google Cloud Vision node.js client library (\`@google-cloud/vision\`). First, install it:
 

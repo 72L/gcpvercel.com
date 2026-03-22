@@ -25,7 +25,7 @@ You'll need to have a Vercel account and project. If you do not have a Vercel ac
 
 ### Step 1: Add the integration to your Vercel project
 
-To add the Google Cloud Platform Vercel integration to your Vercel project, Visit the [Google Cloud Platform Vercel integration page](https://vercel.com/integrations/gcp/new) and click the "Add Integration" button. Even if you've already installed the integration in another Vercel project, you'll need to repeat this step for each Vercel project you want to use GCP with.
+To add the Google Cloud Platform Vercel integration to your Vercel project, Visit the [Google Cloud Platform Vercel integration page](https://vercel.com/integrations/google-cloud-platform-community/new) and click the "Add Integration" button. Even if you've already installed the integration in another Vercel project, you'll need to repeat this step for each Vercel project you want to use GCP with.
 
 ### Step 2: Add the service account key file to your Vercel project
 

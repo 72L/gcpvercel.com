@@ -51,7 +51,7 @@ export default function LandingPagesLayout({
         </FooterLink>
         <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
         <FooterLink href="/terms-of-service">Terms of Service</FooterLink>
-        <FooterLink href="https://vercel.com/integrations/gcp">
+        <FooterLink href="https://vercel.com/integrations/google-cloud-platform-community">
           Vercel Integration <ExternalLink size={14} />
         </FooterLink>
       </div>

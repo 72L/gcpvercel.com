@@ -14,7 +14,7 @@ Vertex AI is a fully-managed, unified AI development platform for building and u
 
 Before using Vertex AI, GCP lists additional setup requirements in the [Vertex AI documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/reference/nodejs/latest). 
 
-Make sure you have installed the Vercel integration as described in the [Installation](/docs/install) guide. You can install it directly from the [integration page](https://vercel.com/integrations/gcp/new).
+Make sure you have installed the Vercel integration as described in the [Installation](/docs/install) guide. You can install it directly from the [integration page](https://vercel.com/integrations/google-cloud-platform-community/new).
 
 You'll need the Vertex AI node.js client library (\`@google-cloud/vertex-ai\`). First, install it:
 

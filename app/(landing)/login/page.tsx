@@ -22,7 +22,7 @@ export default function Home() {
           </div>
           <Button
             primary
-            href="https://vercel.com/integrations/gcp/new"
+            href="https://vercel.com/integrations/google-cloud-platform-community/new"
             className="text-xl font-medium"
           >
             Configure Integration

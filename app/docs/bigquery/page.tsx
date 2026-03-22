@@ -12,7 +12,7 @@ Google BigQuery is a fully-managed data warehouse that allows you to store and q
 
 ## Configuration
 
-Make sure you have installed the Vercel integration as described in the [Installation](/docs/install) guide. You can install it directly from the [integration page](https://vercel.com/integrations/gcp/new).
+Make sure you have installed the Vercel integration as described in the [Installation](/docs/install) guide. You can install it directly from the [integration page](https://vercel.com/integrations/google-cloud-platform-community/new).
 
 You'll need the Google Cloud BigQuery node.js client library (\`@google-cloud/bigquery\`). First, install it:
 

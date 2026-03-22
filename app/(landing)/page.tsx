@@ -20,7 +20,7 @@ export default function Home() {
       <div className="flex flex-col sm:flex-row gap-x-2 gap-y-4">
         <Button
           primary
-          href="https://vercel.com/integrations/gcp/new"
+          href="https://vercel.com/integrations/google-cloud-platform-community/new"
           className="text-xl font-medium"
         >
           Add Vercel Integration
