@@ -1,8 +1,14 @@
-import { InstallingUser, TeamLimited } from '@/types/vercel.types';
+import {
+  InstallingUser,
+  TeamLimited,
+  VercelCredentials,
+} from '@/types/vercel.types';
 
 import { vercelAPIRequest } from './api';
 
-export default async function getVercelUserTeamData(tokenJson: any) {
+export default async function getVercelUserTeamData(
+  tokenJson: VercelCredentials,
+) {
   // get user data from Vercel
   const data = await vercelAPIRequest({
     credentials: tokenJson,

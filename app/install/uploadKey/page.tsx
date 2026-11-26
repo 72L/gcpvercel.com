@@ -17,16 +17,22 @@ import { InstallationContext } from '../layout';
 
 export default function Page() {
   const router = useRouter();
-  const { vercelCredentials } = useContext(InstallationContext);
+  const { installationGrant } = useContext(InstallationContext);
   const [projects, setProjects] = useState<{ id: string; name: string }[]>([]);
 
   // get vercel projects
   useEffect(() => {
-    if (!vercelCredentials) return;
-    getTeamProjects(vercelCredentials).then((res) => {
-      setProjects(res);
-    });
-  }, [vercelCredentials]);
+    if (!installationGrant) return;
+    getTeamProjects(installationGrant)
+      .then((res) => {
+        setProjects(res);
+      })
+      .catch(() => {
+        toast.error(
+          'Unable to load your Vercel projects. Please reinstall from Vercel.',
+        );
+      });
+  }, [installationGrant]);
 
   return (
     <div>
@@ -40,13 +46,15 @@ export default function Page() {
             return;
           }
 
-          if (!vercelCredentials) {
-            toast.error('Something went wrong: Missing Vercel credentials.');
+          if (!installationGrant) {
+            toast.error(
+              'Something went wrong: Missing Vercel installation session. Please reinstall from Vercel.',
+            );
             return;
           }
 
           addServiceAccountToProject({
-            vercelCredentials,
+            installationGrant,
             serviceAccountKey,
             projectId,
           }).then(async (res: any) => {

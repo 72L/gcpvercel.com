@@ -5,32 +5,32 @@ import { ReactNode, createContext, useState } from 'react';
 import { Toaster } from 'sonner';
 
 import { classes } from '@/lib/classes';
-import { VercelCredentials } from '@/types/vercel.types';
 
 interface IInstallationContext {
-  vercelCredentials: VercelCredentials | null;
-  setVercelCredentials: (vercelCredentials: VercelCredentials) => void;
+  installationGrant: string | null;
+  setInstallationGrant: (installationGrant: string) => void;
   installationId: string | null;
   setInstallationId: (installationId: string) => void;
 }
 
 export const InstallationContext = createContext<IInstallationContext>({
-  vercelCredentials: null,
-  setVercelCredentials: () => {},
+  installationGrant: null,
+  setInstallationGrant: () => {},
   installationId: null,
   setInstallationId: () => {},
 });
 
 const InstallationContextProvider = ({ children }: { children: ReactNode }) => {
-  const [vercelCredentials, setVercelCredentials] =
-    useState<VercelCredentials | null>(null);
+  const [installationGrant, setInstallationGrant] = useState<string | null>(
+    null,
+  );
   const [installationId, setInstallationId] = useState<string | null>(null);
 
   return (
     <InstallationContext.Provider
       value={{
-        vercelCredentials,
-        setVercelCredentials,
+        installationGrant,
+        setInstallationGrant,
         installationId,
         setInstallationId,
       }}

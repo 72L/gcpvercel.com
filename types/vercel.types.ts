@@ -1,8 +1,14 @@
+/** Credentials for a Vercel API request (a short-lived client_credentials token). */
 export interface VercelCredentials {
   access_token: string;
   team_id: string | null;
-  user_id: string;
+}
+
+/** Installation details returned by the OAuth code exchange (token discarded). */
+export interface VercelInstallation {
   installation_id: string;
+  team_id: string | null;
+  user_id: string;
 }
 
 // https://vercel.com/docs/rest-api/interfaces#teamlimited

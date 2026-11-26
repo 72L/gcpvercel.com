@@ -6,30 +6,29 @@ import { Loader2 } from 'lucide-react';
 import { redirect } from 'next/navigation';
 
 import { InstallationContext } from '@/app/install/layout';
-import { VercelCredentials } from '@/types/vercel.types';
 
 export const RegisterInstallation = ({
-  vercelCredentials,
+  installationGrant,
   installationId,
   redirectTo,
 }: {
-  vercelCredentials: VercelCredentials;
+  installationGrant: string;
   installationId: string;
   redirectTo: string;
 }) => {
   const context = useContext(InstallationContext);
 
   useEffect(() => {
-    context.setVercelCredentials(vercelCredentials);
+    context.setInstallationGrant(installationGrant);
     context.setInstallationId(installationId);
-  }, [vercelCredentials, installationId, context]);
+  }, [installationGrant, installationId, context]);
 
   // redirect after both are set
   useEffect(() => {
-    if (context.vercelCredentials && context.installationId) {
+    if (context.installationGrant && context.installationId) {
       redirect(redirectTo);
     }
-  }, [context.vercelCredentials, context.installationId, redirectTo]);
+  }, [context.installationGrant, context.installationId, redirectTo]);
 
   return (
     <div className="flex flex-row w-full h-full text-center items-center justify-center gap-2">
