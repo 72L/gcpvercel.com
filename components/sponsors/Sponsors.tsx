@@ -17,14 +17,6 @@ export const Sponsors = () => {
             description:
               'Catch bugs early and deploy fixes proactively with real-time Vercel log alerts. Get started today with our easy no-code installation.',
           },
-          {
-            logo: 'sendwith.png',
-            name: 'Sendwith',
-            url: 'https://sendwith.email',
-            tagline: 'Email users, not spam folders',
-            description:
-              'Use the Gmail API in minutes. Email users from your Google Workspace account for best in class deliverability.',
-          },
         ].map((sponsor, index) => (
           <Link
             className="flex flex-row items-start gap-4 flex-1 w-full sm:w-1/2 max-w-[500px] group"
