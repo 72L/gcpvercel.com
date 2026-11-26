@@ -3,12 +3,20 @@
 import { AddedEnvVarResponse, VercelCredentials } from '@/types/vercel.types';
 
 import { VERCEL_METHODS, VercelError, vercelAPIRequest } from '../vercel/api';
+import { credentialsFromGrant } from '../vercel/credentialsFromGrant';
 
 export const addServiceAccountToProject = async (args: {
-  vercelCredentials: VercelCredentials;
+  installationGrant: string;
   serviceAccountKey: string;
   projectId: string;
 }) => {
+  let vercelCredentials: VercelCredentials;
+  try {
+    vercelCredentials = await credentialsFromGrant(args.installationGrant);
+  } catch (e) {
+    return { error: (e as Error).message };
+  }
+
   const serviceAccountKey = JSON.parse(args.serviceAccountKey);
   const {
     client_email: clientEmail,
@@ -26,7 +34,7 @@ export const addServiceAccountToProject = async (args: {
       | 'plain', // visible to user in Vercel UI
   ) => {
     const res = await vercelAPIRequest<AddedEnvVarResponse>({
-      credentials: args.vercelCredentials,
+      credentials: vercelCredentials,
       endpoint: `v10/projects/${args.projectId}/env`,
       method: VERCEL_METHODS.POST,
       params: new URLSearchParams({

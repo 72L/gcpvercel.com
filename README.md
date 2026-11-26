@@ -7,7 +7,7 @@ This is a Vercel integration that helps developers access Google Cloud Platform 
 - Docs: [https://www.gcpvercel.com/docs](https://www.gcpvercel.com/docs)
 
 ## Privacy
-Vercel access tokens and GCP credentials are not persisted beyond the limited lifetime of the frontend React context. Google Cloud Platform credentials are uploaded directly to Vercel, and this project does not store or retain access. 
+Vercel access tokens and GCP credentials are not persisted. The integration uses short-lived (1 hour) Vercel access tokens requested with the OAuth `client_credentials` grant; tokens stay on the server and are only cached in memory until they expire. The browser holds only a signed, 1-hour installation session in the frontend React context. Google Cloud Platform credentials are uploaded directly to Vercel, and this project does not store or retain access. 
 
 Therefore, users will need to install this integration from the Vercel [integration listing](https://vercel.com/integrations/google-cloud-platform-community) every time they want to use it. Multiple installations of this integration to the same Vercel project does not create duplicates. 
 

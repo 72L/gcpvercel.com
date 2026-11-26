@@ -1,10 +1,12 @@
 'use server';
 
-import { V4ProjectsResponse, VercelCredentials } from '@/types/vercel.types';
+import { V4ProjectsResponse } from '@/types/vercel.types';
 
 import { VercelError, vercelAPIRequest } from '../vercel/api';
+import { credentialsFromGrant } from '../vercel/credentialsFromGrant';
 
-export const getTeamProjects = async (vercelCredentials: VercelCredentials) => {
+export const getTeamProjects = async (installationGrant: string) => {
+  const vercelCredentials = await credentialsFromGrant(installationGrant);
   const res = await vercelAPIRequest<
     | V4ProjectsResponse
     | {

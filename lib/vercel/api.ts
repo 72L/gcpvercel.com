@@ -42,7 +42,8 @@ export const vercelAPIRequest = <T>({
     method,
     body,
   };
-  if (verbose) console.log('Vercel API req:', url, options);
+  // never log the bearer token
+  if (verbose) console.log('Vercel API req:', method, url);
   return (
     fetch(url, options)
       // json parse
