@@ -27,8 +27,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### [Logalert - Monitor Vercel logs](https://app.logalert.app/)
 Catch bugs early and deploy fixes proactively with real-time Vercel log alerts. Get started today with our easy no-code installation.
-
-<img src="https://www.sendwith.email/banner_logo.svg" alt="sendwith logo" width="150"/>
-
-### [Sendwith - Email users, not spam folders](https://www.sendwith.email/)
-Use the Gmail API in minutes. Email users from your Google Workspace account for best in class deliverability.
